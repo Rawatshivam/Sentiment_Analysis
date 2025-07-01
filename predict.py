@@ -17,7 +17,7 @@ def preprocess(text, max_len=200):
 def predict_sentiment(text):
     input_seq = preprocess(text)
     prediction = model.predict(input_seq)[0][0]
-    return "Positive 😊" if prediction > 0.5 else "Negative 😞"
+    return "Positive " if prediction > 0.5 else "Negative "
 
 # Run example
 if __name__ == "__main__":
